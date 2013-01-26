@@ -21,11 +21,13 @@ DrivewithJoystick::DrivewithJoystick() {
 
 // Called just before this Command runs the first time
 void DrivewithJoystick::Initialize() {
-	Robot::driver->robotDrive41.MecanumDrive_Cartesian(controller->GetX(), controller->GetY(), controller->GetZ(), 0);
+	
 }
 
 // Called repeatedly when this Command is scheduled to run
-void DrivewithJoystick::Execute() {
+void DrivewithJoystick::Execute() \
+{
+	Robot::driver->takeJoystickInpute(Robot::oi.controller);
 	
 }
 
@@ -35,8 +37,9 @@ bool DrivewithJoystick::IsFinished() {
 }
 
 // Called once after isFinished returns true
-void DrivewithJoystick::End() {
-	
+void DrivewithJoystick::End() 
+{
+	Robot::driver->stop();
 }
 
 // Called when another command which requires one or more of the same

@@ -60,49 +60,40 @@ OBJ_DIR := PPC603gnu
 endif
 endif
 
-DEP_FILES := $(OBJ_DIR)/RobotMap.d $(OBJ_DIR)/OI.d $(OBJ_DIR)/Robot.d
--include $(DEP_FILES)
-
 ifeq ($(BUILD_SPEC),PPC32diab)
 SUBDIRS :=
-OBJECTS := $(OBJ_DIR)/RobotMap.o $(OBJ_DIR)/OI.o $(OBJ_DIR)/Robot.o
+OBJECTS :=
 
-PROJECT_TARGETS :=
+PROJECT_TARGETS := $(OBJECTS)
 
 SUB_OBJECTS :=
 SUB_TARGETS :=
 endif
 ifeq ($(BUILD_SPEC),PPC32gnu)
 SUBDIRS :=
-OBJECTS := $(OBJ_DIR)/RobotMap.o $(OBJ_DIR)/OI.o $(OBJ_DIR)/Robot.o
+OBJECTS :=
 
-PROJECT_TARGETS :=
+PROJECT_TARGETS := $(OBJECTS)
 
 SUB_OBJECTS :=
 SUB_TARGETS :=
 endif
 ifeq ($(BUILD_SPEC),PPC603diab)
 SUBDIRS :=
-OBJECTS := $(OBJ_DIR)/RobotMap.o $(OBJ_DIR)/OI.o $(OBJ_DIR)/Robot.o
+OBJECTS :=
 
-PROJECT_TARGETS :=
+PROJECT_TARGETS := $(OBJECTS)
 
 SUB_OBJECTS :=
 SUB_TARGETS :=
 endif
 ifeq ($(BUILD_SPEC),PPC603gnu)
-SUBDIRS := "C:/WindRiver/workspace/UltimateAscent/.git" \
-	 "C:/WindRiver/workspace/UltimateAscent/Commands" \
-	 "C:/WindRiver/workspace/UltimateAscent/Subsystems" \
-	 "C:/WindRiver/workspace/UltimateAscent/robotbuilder"
-OBJECTS := $(OBJ_DIR)/RobotMap.o $(OBJ_DIR)/OI.o $(OBJ_DIR)/Robot.o
+SUBDIRS :=
+OBJECTS :=
 
-PROJECT_TARGETS :=
+PROJECT_TARGETS := $(OBJECTS)
 
-SUB_OBJECTS := C:/WindRiver/workspace/UltimateAscent/Commands/$(OBJ_DIR)/AutonomousCommand.o \
-	 C:/WindRiver/workspace/UltimateAscent/Commands/$(OBJ_DIR)/Drive.o \
-	 C:/WindRiver/workspace/UltimateAscent/Commands/$(OBJ_DIR)/DrivewithJoystick.o \
-	 C:/WindRiver/workspace/UltimateAscent/Subsystems/$(OBJ_DIR)/Driver.o
+SUB_OBJECTS :=
 SUB_TARGETS :=
 endif
 
