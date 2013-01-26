@@ -25,9 +25,9 @@ void DrivewithJoystick::Initialize() {
 }
 
 // Called repeatedly when this Command is scheduled to run
-void DrivewithJoystick::Execute() \
+void DrivewithJoystick::Execute()
 {
-	Robot::driver->takeJoystickInpute(Robot::oi.controller);
+	Robot::driver->takeJoystickInpute(Robot::oi.getController());
 	
 }
 
