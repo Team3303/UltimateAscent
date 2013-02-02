@@ -31,7 +31,7 @@ public:
 	Driver();
 	void InitDefaultCommand();
 	
-	void Driver::takeJoystickInpute(Joystick controller);
-	void Driver::stop();
+	void takeJoystickInpute(Joystick* controller);
+	void stop();
 };
 #endif
